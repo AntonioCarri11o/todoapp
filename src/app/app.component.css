@@ -1,0 +1,27 @@
+
+mat-sidenav-container{
+    height: calc(205vh - 115vh);
+    background-color: white;
+    color:black;
+  }
+  mat-sidenav{
+    width: 200px;
+    background-color:"#eee";
+  }  
+  a{
+    justify-content: center;
+    text-decoration: none;
+  }
+  .menu{
+    color: black;
+  }
+  .newtask{
+    position: fixed;
+    bottom: 2em;
+    right: 4em;
+  }
+  .listContainer{
+    margin: auto;
+    margin-top: 5em;
+    width: 80%;
+  }

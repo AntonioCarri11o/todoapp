@@ -1,0 +1,23 @@
+<form #NewTaskForm="ngForm" novalidate (submit)="send()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Titulo</mat-label>
+      <input type="text" placeholder="Ej. Nueva tarea" matInput required name="title" #name="ngModel" [(ngModel)]="task.title">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <textarea matInput placeholder="Ej. Esta es una nueva tarea"name="description" #name="ngModel"[(ngModel)]="task.description"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Fecha limite</mat-label>
+        <input matInput name="date" #name="ngModel" [(ngModel)]="task.date" [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div mat-dialog-actions>
+        <div class="right">
+        <button mat-raised-button  type="submit">Hecho</button>
+        </div>
+    </div>
+  </form>
